@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+service Echo {
+  rpc SendOne (OneRequest) returns (OneReply) {}
+  rpc SendTwo (TwoRequest) returns (TwoReply) {}
+}
+
+message OneRequest {
+  string arg1 = 1;
+}
+
+message OneReply {
+  string message = 1;
+}
+
+message TwoRequest {
+  string arg1 = 1;
+  int32 arg2 = 2;
+}
+
+message TwoReply {
+  string message = 1;
+}
