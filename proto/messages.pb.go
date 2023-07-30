@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        v4.23.4
-// source: messages.proto
+// source: proto/messages.proto
 
-package protoc
+package grpcrestapi
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -31,7 +31,7 @@ type OneRequest struct {
 func (x *OneRequest) Reset() {
 	*x = OneRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_messages_proto_msgTypes[0]
+		mi := &file_proto_messages_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -44,7 +44,7 @@ func (x *OneRequest) String() string {
 func (*OneRequest) ProtoMessage() {}
 
 func (x *OneRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[0]
+	mi := &file_proto_messages_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *OneRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OneRequest.ProtoReflect.Descriptor instead.
 func (*OneRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{0}
+	return file_proto_messages_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *OneRequest) GetArg1() string {
@@ -78,7 +78,7 @@ type OneReply struct {
 func (x *OneReply) Reset() {
 	*x = OneReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_messages_proto_msgTypes[1]
+		mi := &file_proto_messages_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -91,7 +91,7 @@ func (x *OneReply) String() string {
 func (*OneReply) ProtoMessage() {}
 
 func (x *OneReply) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[1]
+	mi := &file_proto_messages_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -104,7 +104,7 @@ func (x *OneReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OneReply.ProtoReflect.Descriptor instead.
 func (*OneReply) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{1}
+	return file_proto_messages_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *OneReply) GetMessage() string {
@@ -126,7 +126,7 @@ type TwoRequest struct {
 func (x *TwoRequest) Reset() {
 	*x = TwoRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_messages_proto_msgTypes[2]
+		mi := &file_proto_messages_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -139,7 +139,7 @@ func (x *TwoRequest) String() string {
 func (*TwoRequest) ProtoMessage() {}
 
 func (x *TwoRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[2]
+	mi := &file_proto_messages_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -152,7 +152,7 @@ func (x *TwoRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TwoRequest.ProtoReflect.Descriptor instead.
 func (*TwoRequest) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{2}
+	return file_proto_messages_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *TwoRequest) GetArg1() string {
@@ -180,7 +180,7 @@ type TwoReply struct {
 func (x *TwoReply) Reset() {
 	*x = TwoReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_messages_proto_msgTypes[3]
+		mi := &file_proto_messages_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -193,7 +193,7 @@ func (x *TwoReply) String() string {
 func (*TwoReply) ProtoMessage() {}
 
 func (x *TwoReply) ProtoReflect() protoreflect.Message {
-	mi := &file_messages_proto_msgTypes[3]
+	mi := &file_proto_messages_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -206,7 +206,7 @@ func (x *TwoReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TwoReply.ProtoReflect.Descriptor instead.
 func (*TwoReply) Descriptor() ([]byte, []int) {
-	return file_messages_proto_rawDescGZIP(), []int{3}
+	return file_proto_messages_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *TwoReply) GetMessage() string {
@@ -216,48 +216,50 @@ func (x *TwoReply) GetMessage() string {
 	return ""
 }
 
-var File_messages_proto protoreflect.FileDescriptor
+var File_proto_messages_proto protoreflect.FileDescriptor
 
-var file_messages_proto_rawDesc = []byte{
-	0x0a, 0x0e, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x22, 0x20, 0x0a, 0x0a, 0x4f, 0x6e, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12,
-	0x0a, 0x04, 0x61, 0x72, 0x67, 0x31, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x61, 0x72,
-	0x67, 0x31, 0x22, 0x24, 0x0a, 0x08, 0x4f, 0x6e, 0x65, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x18,
-	0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x34, 0x0a, 0x0a, 0x54, 0x77, 0x6f, 0x52,
-	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x31, 0x18, 0x01,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x61, 0x72, 0x67, 0x31, 0x12, 0x12, 0x0a, 0x04, 0x61, 0x72,
-	0x67, 0x32, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x61, 0x72, 0x67, 0x32, 0x22, 0x24,
-	0x0a, 0x08, 0x54, 0x77, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65,
-	0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73,
-	0x73, 0x61, 0x67, 0x65, 0x32, 0x50, 0x0a, 0x04, 0x45, 0x63, 0x68, 0x6f, 0x12, 0x23, 0x0a, 0x07,
-	0x53, 0x65, 0x6e, 0x64, 0x4f, 0x6e, 0x65, 0x12, 0x0b, 0x2e, 0x4f, 0x6e, 0x65, 0x52, 0x65, 0x71,
-	0x75, 0x65, 0x73, 0x74, 0x1a, 0x09, 0x2e, 0x4f, 0x6e, 0x65, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22,
-	0x00, 0x12, 0x23, 0x0a, 0x07, 0x53, 0x65, 0x6e, 0x64, 0x54, 0x77, 0x6f, 0x12, 0x0b, 0x2e, 0x54,
-	0x77, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x09, 0x2e, 0x54, 0x77, 0x6f, 0x52,
-	0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+var file_proto_messages_proto_rawDesc = []byte{
+	0x0a, 0x14, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2f, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x73,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x20, 0x0a, 0x0a, 0x4f, 0x6e, 0x65, 0x52, 0x65, 0x71,
+	0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x31, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x04, 0x61, 0x72, 0x67, 0x31, 0x22, 0x24, 0x0a, 0x08, 0x4f, 0x6e, 0x65, 0x52,
+	0x65, 0x70, 0x6c, 0x79, 0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x22, 0x34,
+	0x0a, 0x0a, 0x54, 0x77, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x12, 0x12, 0x0a, 0x04,
+	0x61, 0x72, 0x67, 0x31, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x61, 0x72, 0x67, 0x31,
+	0x12, 0x12, 0x0a, 0x04, 0x61, 0x72, 0x67, 0x32, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04,
+	0x61, 0x72, 0x67, 0x32, 0x22, 0x24, 0x0a, 0x08, 0x54, 0x77, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79,
+	0x12, 0x18, 0x0a, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x07, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x32, 0x50, 0x0a, 0x04, 0x45, 0x63,
+	0x68, 0x6f, 0x12, 0x23, 0x0a, 0x07, 0x53, 0x65, 0x6e, 0x64, 0x4f, 0x6e, 0x65, 0x12, 0x0b, 0x2e,
+	0x4f, 0x6e, 0x65, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x09, 0x2e, 0x4f, 0x6e, 0x65,
+	0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x12, 0x23, 0x0a, 0x07, 0x53, 0x65, 0x6e, 0x64, 0x54,
+	0x77, 0x6f, 0x12, 0x0b, 0x2e, 0x54, 0x77, 0x6f, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x09, 0x2e, 0x54, 0x77, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x42, 0x0f, 0x5a, 0x0d,
+	0x2e, 0x2f, 0x67, 0x72, 0x70, 0x63, 0x72, 0x65, 0x73, 0x74, 0x61, 0x70, 0x69, 0x62, 0x06, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_messages_proto_rawDescOnce sync.Once
-	file_messages_proto_rawDescData = file_messages_proto_rawDesc
+	file_proto_messages_proto_rawDescOnce sync.Once
+	file_proto_messages_proto_rawDescData = file_proto_messages_proto_rawDesc
 )
 
-func file_messages_proto_rawDescGZIP() []byte {
-	file_messages_proto_rawDescOnce.Do(func() {
-		file_messages_proto_rawDescData = protoimpl.X.CompressGZIP(file_messages_proto_rawDescData)
+func file_proto_messages_proto_rawDescGZIP() []byte {
+	file_proto_messages_proto_rawDescOnce.Do(func() {
+		file_proto_messages_proto_rawDescData = protoimpl.X.CompressGZIP(file_proto_messages_proto_rawDescData)
 	})
-	return file_messages_proto_rawDescData
+	return file_proto_messages_proto_rawDescData
 }
 
-var file_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_messages_proto_goTypes = []interface{}{
+var file_proto_messages_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_proto_messages_proto_goTypes = []interface{}{
 	(*OneRequest)(nil), // 0: OneRequest
 	(*OneReply)(nil),   // 1: OneReply
 	(*TwoRequest)(nil), // 2: TwoRequest
 	(*TwoReply)(nil),   // 3: TwoReply
 }
-var file_messages_proto_depIdxs = []int32{
+var file_proto_messages_proto_depIdxs = []int32{
 	0, // 0: Echo.SendOne:input_type -> OneRequest
 	2, // 1: Echo.SendTwo:input_type -> TwoRequest
 	1, // 2: Echo.SendOne:output_type -> OneReply
@@ -269,13 +271,13 @@ var file_messages_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_messages_proto_init() }
-func file_messages_proto_init() {
-	if File_messages_proto != nil {
+func init() { file_proto_messages_proto_init() }
+func file_proto_messages_proto_init() {
+	if File_proto_messages_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_messages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_proto_messages_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*OneRequest); i {
 			case 0:
 				return &v.state
@@ -287,7 +289,7 @@ func file_messages_proto_init() {
 				return nil
 			}
 		}
-		file_messages_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_proto_messages_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*OneReply); i {
 			case 0:
 				return &v.state
@@ -299,7 +301,7 @@ func file_messages_proto_init() {
 				return nil
 			}
 		}
-		file_messages_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_proto_messages_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TwoRequest); i {
 			case 0:
 				return &v.state
@@ -311,7 +313,7 @@ func file_messages_proto_init() {
 				return nil
 			}
 		}
-		file_messages_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_proto_messages_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*TwoReply); i {
 			case 0:
 				return &v.state
@@ -328,18 +330,18 @@ func file_messages_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_messages_proto_rawDesc,
+			RawDescriptor: file_proto_messages_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_messages_proto_goTypes,
-		DependencyIndexes: file_messages_proto_depIdxs,
-		MessageInfos:      file_messages_proto_msgTypes,
+		GoTypes:           file_proto_messages_proto_goTypes,
+		DependencyIndexes: file_proto_messages_proto_depIdxs,
+		MessageInfos:      file_proto_messages_proto_msgTypes,
 	}.Build()
-	File_messages_proto = out.File
-	file_messages_proto_rawDesc = nil
-	file_messages_proto_goTypes = nil
-	file_messages_proto_depIdxs = nil
+	File_proto_messages_proto = out.File
+	file_proto_messages_proto_rawDesc = nil
+	file_proto_messages_proto_goTypes = nil
+	file_proto_messages_proto_depIdxs = nil
 }
